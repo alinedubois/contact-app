@@ -5,21 +5,18 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Contact />
+        <Contact
+            avatarUrl="https://i.ebayimg.com/images/g/Xx8AAOSw5-lbi~aM/s-l300.jpg"
+            name="Snoopy"
+            statusText="online"
+        />
+
+        <Contact
+            avatarUrl="http://data.pixiz.com/output/user/frame/preview/api/big/9/2/8/0/1680829_99a59.jpg"
+            name="Minnie Mouse"
+            statusText="offline"
+        />
+
     </div>
   );
 }

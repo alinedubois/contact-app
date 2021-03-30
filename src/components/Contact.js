@@ -1,37 +1,23 @@
-import logo from "../logo.svg";
 import './Contact.css';
-
-const status = true;
-const statusText = true;
 
 const Contact = (props) => (
 
-        <div className="Contact">
+    <div className="Contact">
+        <img
+            alt="avatar"
+            className="avatar"
+            src={props.avatarUrl}
+            width="48"
+            height="48"
+        />
 
-                <div className= "avatar">
-                    {props.img}
-                </div>
-
-                <div className="status">
-
-                    {props.status ? "online" : "offline"}
-
-                    <div className= "name">
-                        <h3>{props.name}</h3>
-                    </div>
-
-                    <div className="status-online">
-                        {props.status ? "online" : "offline"}
-                    </div>
-
-                    <p className="status-text">
-                        {props.statusText ? "online" : "offline"}
-                    </p>
-
-                </div>
-
+        <div className="status">
+            <h3 className="name">{props.name}</h3>
+            <div className={props.statusText === "online" ? "status-online" : "status-offline"}></div>
+            <p className="status-text">{props.statusText === "online" ? "online" : "offline"}</p>
         </div>
-
-);
+    </div>
+)
+;
 export default Contact;
 
